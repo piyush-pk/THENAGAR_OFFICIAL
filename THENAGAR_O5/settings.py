@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#k$(5(y-2dv6qq762hl6@l5&=oocetj#!nkup+bazhuaiu*0xu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['thenagar.herokuapp.com']
+ALLOWED_HOSTS = ['thenagar.herokuapp.com', '*']
 
 
 # Application definition
@@ -126,7 +126,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -136,19 +135,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Manually Added
 
 # Base url to serve media files
+
+
+
+                                  
+
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-# Path where media is stored
-
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / "media",
-]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
-
