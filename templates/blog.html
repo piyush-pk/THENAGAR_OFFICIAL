@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+<title>SUNZINE | Photography HTML Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="SUNZINE Photo Studio HTML Template">
+<meta name="keywords" content="photo, html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="static/css/A.bootstrap.min.css%2bfont-awesome.min.css%2bslicknav.min.css%2bmagnific-popup.css%2bowl.carousel.min.css%2cMcc.i3pj0GAxwG.css.pagespeed.cf.dADa-40XuK.css" />
+
+<link rel="stylesheet" href="static/css/A.style.css.pagespeed.cf.TyKZI_ytCJ.css" />
+<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="preloder">
+<div class="loader"></div>
+</div>
+
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu">
+<a href="/" class="site-logo">
+<img src="static/img/xlogo.png.pagespeed.ic.Ri7dQT2PqV.png" alt="">
+</a>
+<nav class="mobile__menu"></nav>
+</div>
+
+
+<header class="header">
+  <div class="header__warp">
+    <a href="/" class="site-logo">
+      <img src="static/img/xlogo.png.pagespeed.ic.Ri7dQT2PqV.png" alt="">
+    </a>
+    <div class="header__right">
+      <nav class="main__menu">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="{% url 'albums' %}">ALBUMS</a></li>
+          <li><a href="{% url 'instagram' %}" >INSTAGRAM</a>
+          <li><a href="{% url 'about' %}">ABOUT</a>
+            <!-- <ul class="sub__menu">
+              <li><a href="albums-details.html">Albums Details</a></li>
+              <li><a href="{% url 'post' %}">Blog Details</a></li>
+            </ul> -->
+          </li>
+          <li><a class="menu--active" href="{% url 'blog' %}">BLOG</a></li>
+          <li><a href="{% url 'contact' %}">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header__switches">
+        <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+        <a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="page__banner">
+<div class="banner__text">
+<h2>Our Blog</h2>
+<div class="site__breadcrumb">
+<a href="#">Home / </a>
+<span>Blog</span>
+</div>
+</div>
+</div>
+
+
+<section class="blog__section">
+<div class="container">
+<div class="row blog_row">
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/x1.jpg.pagespeed.ic.SD2dM2NAwr.jpg" alt="">
+<div class="blog__item--cata">Life Style</div>
+<h3><a href="{% url 'post' %}">Kim Kardashian West's new shapewear line is facing</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/2.jpg" alt="">
+<div class="blog__item--cata">Travel</div>
+<h3><a href="{% url 'post' %}">Shailene Woodley has a new look on 'Big Little'</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/3.jpg" alt="">
+<div class="blog__item--cata">Sport</div>
+<h3><a href="{% url 'post' %}">Women's razor bran is fighting 'taboo' of pubic</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/4.jpg" alt="">
+<div class="blog__item--cata">Life Style</div>
+<h3><a href="{% url 'post' %}">Emily Ratajkowski on learning tolove her ‘weird’ belly</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/6.jpg" alt="">
+<div class="blog__item--cata">Life Style</div>
+<h3><a href="{% url 'post' %}">Emily Ratajkowski on ignoring the comments</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/5.jpg" alt="">
+<div class="blog__item--cata">Foody</div>
+<h3><a href="{% url 'post' %}">Bride shares story of mother in law wearing wedding</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/7.jpg" alt="">
+<div class="blog__item--cata">Life Style</div>
+<h3><a href="{% url 'post' %}">All the juicy details about Heidi Klum and Tim new fashion</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/9.jpg" alt="">
+<div class="blog__item--cata">Life Style</div>
+<h3><a href="{% url 'post' %}">See how women's fashion in sports has changed the years</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 blog__grid">
+<div class="blog__item">
+<img src="static/img/blog/8.jpg" alt="">
+<div class="blog__item--cata">Foody</div>
+<h3><a href="{% url 'post' %}.html">3 affordable places to shop for cute clothes online</a></h3>
+<div class="blog__item--date">26th June, 2019</div>
+</div>
+</div>
+</div>
+<div class="load__more__post">
+<button class="load--btn">More posts</button>
+</div>
+</div>
+</section>
+
+
+<footer class="footer__section">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-3">
+<a href="#" class="footer__logo">
+<img src="static/img/xfooter-logo.png.pagespeed.ic.BErcKLaY4D.png" alt="">
+</a>
+</div>
+<div class="col-lg-6">
+
+<div class="footer__copyright__text">
+<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+</div>
+
+</div>
+<div class="col-lg-3">
+<div class="footer__social">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<div class="search-model">
+<div class="h-100 d-flex align-items-center justify-content-center">
+<div class="search-close-switch">+</div>
+<form class="search-model-form">
+<input type="text" id="search-input" placeholder="Search here.....">
+</form>
+</div>
+</div>
+
+
+<script src="static/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="static/js/jquery.slicknav.min.js%2bjquery.magnific-popup.min.js%2bowl.carousel.min.js.pagespeed.jc.iu4J9YwEIW.js"></script><script>eval(mod_pagespeed_I84lkVQDiI);</script>
+<script>eval(mod_pagespeed_mWsnX5_C9m);</script>
+<script>eval(mod_pagespeed_G8IUZFjnnz);</script>
+<script src="static/js/mixitup.min.js"></script>
+<script src="static/js/masonry.pkgd.min.js"></script>
+<script src="static/js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"653db0bccc8c5069","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.1","si":10}'></script>
+</body>
+
+</html>

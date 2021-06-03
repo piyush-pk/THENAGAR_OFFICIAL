@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 m-auto">
+          <h2>Hello! Welcome to thenagar_o5 Instgram photo gallery With Creative & Unique Style</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function divhide(){
+      setTimeout(() => {
+        let div = document.querySelector(".mfp-container");
+        div.style.height = 0;
+      }, 500);
+      console.log("Trying");
+    }
+  </script>
+
+  <section class="gallery__section">
+    <!-- <div class="filter-controls">
+      <ul>
+        <li class="active" data-filter="*">ALL</li>
+        <li data-filter=".photo">PHOTOGRAPHY</li>
+        <li data-filter=".travel">TRAVEL</li>
+        <li data-filter=".natural">NATURE</li>
+        <li data-filter=".fashion">FASHION</li>
+        <li data-filter=".lifestyle">LIFE STYLE</li>
+      </ul>
+    </div> -->
+
+    <div class="gallery__warp">
+        {% for url in urls %}
+            <div class="mix grid__item grid--{{forloop.counter}} travel">
+                <a class="gallery_img set-bg" onclick="divhide()" href="{{url}}" data-setbg="{{url}}">
+                    <div class="gellery__text">
+                        <span>BY PIYUSH KHANDELWAL</span>
+                        <h3>@mr_piyushpk</h3>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+          
+    </div>
+    <div class="gird__loading">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="contact__map">
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14165.819945941776!2d77.090957128982!3d27.42392772656022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3972fbf8f8d745ab%3A0x9e18a2fce45bc3c9!2sNagar%2C%20Rajasthan%20321205!5e0!3m2!1sen!2sin!4v1622655004174!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen=""></iframe>
+    <!-- <div class="map__info"><i class="fa fa-map-marker"></i> 64406 Willms Light Suite 414, Lake Brown</div> -->
+</div>
+
+
+<section class="contact__section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="contact__logo">
+                    <img src="img/contact-logo.png" alt="">
+                </div>
+                <div class="contact__info">
+                    <h3>Address:</h3>
+                    <p>Piyush Khandelwal, Front Of Gajiya Garden, Kherli Road, Nagar 321205</p>
+                    <a href="#">View In Map</a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-sm-4">
+                        <div class="contact__info">
+                            <h3>ASAP CONTACT:</h3>
+                            <p><a href="https://www.instagram.com/mr_piyushpk/">@mr_piyushpk</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="contact__info">
+                            <h3>Email:</h3>
+                            <p><a href="mailto:khandelwalpiyush02@gmail.com">[SEND MAIL]</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__info">
+                    <h3>Working Hours:</h3>
+                    <p>08.00am - 21.00pm Weekdays</p>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="contact__form__box">
+                    <h2>Contact Form</h2>
+                    <form method="POST" action="/contact">
+                        {% csrf_token %}
+                        <input type="text" required name="name" placeholder="Your Name">
+                        <input type="text" required name="mail" placeholder="Your Email">
+                        <textarea name="desc" required placeholder="Your Messages"></textarea>
+                        <button class="site-btn">SEND MESSAGES</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

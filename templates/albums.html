@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .album_pk{
+        border-radius: 15px;
+    }
+    .album_img{
+        box-shadow: 10px 10px 10px black;
+        width: auto;
+        transition: 0.2s;
+    }
+    .album_img:hover{
+        box-shadow: 25px 25px 25px black;
+        width: auto;
+        transition: 0.2s;
+    }
+    .album_img:active{
+        box-shadow: 10px 10px 10px black;
+        width: auto;
+        transition: 0.2s;
+    }
+</style>
+
+<div class="albums__section">
+    <div class="row albam_row">
+        {% for album in albums %}
+            <div class="col-lg-4 albam__grid album_pk">
+                <div class="album__item">
+                    <a href="albums/{{album.url_slug}}">
+                    <div class="album__thumb set-bg album_img" data-setbg="/media/{{album.thumbnail}}"></div>
+                </a>
+                    <a href="albums/{{album.url_slug}}" class="album__link">{{album.name}}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

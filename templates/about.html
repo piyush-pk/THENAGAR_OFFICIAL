@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page__banner">
+    <div class="banner__text">
+        <h2>About Us</h2>
+        <div class="site__breadcrumb">
+            <a href="/">Home / </a>
+            <span>About Us</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="about__page">
+
+    <div class="about__text">
+        <div class="container">
+            <div class="section__title">
+                <h2>Hello World! We Are Developers</h2>
+                <h2>We always create something greatful for normal user.</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-9 m-auto">
+                    <p>We Created This Website For Sharing Our Enjoyable / Happy Moments With Others. By This Everyone On Internet Can See How Beautiful Nagar is.
+                        And Also By Creating This Website We Are Go Forward To Digital India.
+                        I Hope You Will Also Help Us By Sharing This Website To Every Member Of Nagar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="static/img/about/about-safe.jpg" alt="THENAGAR_O5">
+        </div>
+        <div class="col-md-6">
+            <img src="static/img/about/safe.jpg" alt="THENAGAR_O5">
+        </div>
+    </div>
+
+    <div class="services__section">
+        <div class="container">
+            <div class="section__title">
+                <h2>What We Do?</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service__item">
+                        <h5>Developers</h5>
+                        <p>Developing A Normar Platform For Sharing Photo. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service__item">
+                        <h5>Easy User Interface</h5>
+                        <p>Interface is Quite Simple Any One Can Share Media. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service__item">
+                        <h5>Easy Management</h5>
+                        <p>The Management Of User And Staff Member is Too Simple Provided Their Admin Panel Also. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about-banner">
+        <img src="static/img/about/about-3.jpg" alt="">
+    </div>
+
+
+    <div class="team__section">
+        <div class="container">
+            <div class="section__title">
+                <h2>Who We Are ?</h2>
+            </div>
+            <div class="row">
+                {% for member in members %}
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__member">
+                            <div class="member_pic">
+                                <img src="media/{{member.image}}" alt="{{member}}">
+                                <div class="member__social">
+                                    <a class="ms_envelope" target="_blank" href="{{member.email}}"><i class="fa fa-envelope-o"></i></a>
+                                    <a class="ms_facebook" target="_blank" href="{{member.facebook}}"><i class="fa fa-facebook"></i></a>
+                                    <a class="ms_twitter" target="_blank" href="{{member.instagram}}"><i class="fa fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <h4>{{member}}</h4>
+                            <p>{{member.post}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/2.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Grant Marshall</h4>
+                        <p>Photographer</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/3.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Burns Marks</h4>
+                        <p>Post-Production</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/4.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Byrd Hewitt</h4>
+                        <p>The Media</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/5.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Lucile Mccormick</h4>
+                        <p>Advertisement</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/6.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Solis Mullen</h4>
+                        <p>Manager</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/7.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Compton Dejesus</h4>
+                        <p>Manager</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="team__member">
+                        <div class="member_pic">
+                            <img src="static/img/team/8.png" alt="">
+                            <div class="member__social">
+                                <a class="ms_envelope" href="#"><i class="fa fa-envelope-o"></i></a>
+                                <a class="ms_facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="ms_twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h4>Britney Soto</h4>
+                        <p>Photographer</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="about__contact">
+        <div class="about__contact__text">
+            <div class="about__contact__bg set-bg" data-setbg="static/img/about-contact.jpg"></div>
+            <div class="container text-white">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="about__contact__title">
+                            <h2>Location</h2>
+                            <p>Get Directions</p>
+                        </div>
+                        <div class="about__contact__textbox">
+                            <h3>Address:</h3>
+                            <p>Piyush Khandelwal, Front Of Gajiya Garden, Kherli Road, Nagar 321205</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="about__contact__textbox">
+                                    <h3>ASAP CONTACT:</h3>
+                                    <p><a href="https://www.instagram.com/mr_piyushpk/">@MR_PIYUSHPK</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-5">
+                                <div class="about__contact__textbox">
+                                    <h3>Email:</h3>
+                                    <p><a href="mailto:khandelwalpiyush02@gmail.com">[SEND MAIL]</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__contact__textbox">
+                            <h3>Working Hours:</h3>
+                            <p>08.00am - 21.00pm Weekdays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__contact__map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14165.819945941776!2d77.090957128982!3d27.42392772656022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3972fbf8f8d745ab%3A0x9e18a2fce45bc3c9!2sNagar%2C%20Rajasthan%20321205!5e0!3m2!1sen!2sin!4v1622655004174!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen=""></iframe>
+            <div class="map__info"><i class="fa fa-map-marker"></i> Piyush Khandelwal, Front Of Gajiya Garden, Kherli Road, Nagar</div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="albums__details__section">
+    <div class="album__slider owl-carousel">
+        {% for photo in photos %}
+            <div class="album__slide set-bg" data-setbg="/media/{{photo.image}}">
+                <div class="album__slide__text">
+                    <div class="container">
+                        <div class="slide__cata">{{photo.category}}</div>
+                        <h2>{{photo.caption}}</h2>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="album_thumb_slider owl-carousel">
+        {% for photo in photos %}
+            <div class="album__slide_thumb">
+                <img src="/media/{{photo.image}}" alt="Piyush Khandelwal">
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,1 @@
+web: gunicorn THENAGAR_O5.wsgi

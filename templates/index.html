@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 m-auto">
+          <h2>Hello! Welcome to SUNZINE photo gallery With Creative & Unique Style</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function divhide(){
+      setTimeout(() => {
+        let div = document.querySelector(".mfp-container");
+        div.style.height = 0;
+      }, 500);
+      console.log("Trying");
+    }
+  </script>
+
+  <section class="gallery__section">
+    <div class="filter-controls">
+      <ul>
+        <li class="active" data-filter="*">ALL</li>
+        {% for album in albums %}
+          <li data-filter=".{{album}}">{{album}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="gallery__warp">
+      {% for photo in photos %}
+        <div class="mix grid__item grid--{{forloop.counter}} {{photo.album}}">
+          <a class="gallery_img set-bg" onclick="divhide()" href="/media/{{photo.image}}" data-setbg="/media/{{photo.image}}">
+            <div class="gellery__text">
+              <span>{{photo.caption}}</span>
+              <h3>{{photo.category}}</h3>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+     </div>
+    <div class="gird__loading">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </section>
+
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      {% if photos.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{photos.previous_page_number}}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      {% endif %}
+      
+      {% if photos.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{photos.next_page_number}}" aria-label="Next">
+            <span class="sr-only">Next</span>
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+
+
+  {% endblock content %}
