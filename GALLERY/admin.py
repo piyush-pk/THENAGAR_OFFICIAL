@@ -19,7 +19,27 @@ class AdminAlbum(admin.ModelAdmin):
     list_display = ['id', 'name', 'tags', 'time']
 
 class AdminPhoto(admin.ModelAdmin):
-    list_display = ['id', 'name', 'image', 'album', 'time']
+    list_display = ['id', 'name', 'admin_photo', 'category', 'album', 'time']
+
+    actions_selection_counter = True
+    #actions_on_bottom = False
+    #actions_on_top = True
+
+    # fields = ('name', 'title','description', 'image', 'admin_photo')
+    
+    list_display_links=[
+        'name',
+        'album'
+    ]
+    list_filter = [
+        'name',
+        'album',
+        'category',
+        'time'
+    ]
+    # date_hierarchy = 'time'
+    
+    readonly_fields = ('time','admin_photo')
 
 class AdminLocation(admin.ModelAdmin):
     list_display = ['id', 'name', 'time']
